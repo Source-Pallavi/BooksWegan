@@ -35,7 +35,7 @@ namespace BooksWeagon.Pages
               Userid.SendKeys(credentials.email);
               Password.SendKeys(credentials.password);
             SignIn.Click();
-            Thread.Sleep(500);
+            Thread.Sleep(5000);
         }
 
     }

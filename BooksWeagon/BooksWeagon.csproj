@@ -92,6 +92,9 @@
   <ItemGroup>
     <Compile Include="Base\BaseClass.cs" />
     <Compile Include="Crdentials\CredentialsData.cs" />
+    <Compile Include="Extentreport\Extent.cs" />
+    <Compile Include="Pages\Logout.cs" />
+    <Compile Include="ScreenShot\ScreenS.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Pages\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +102,13 @@
   <ItemGroup>
     <None Include="Crdentials\data.json" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Automation_Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Extentreport\dashboard.html" />
+    <Content Include="ScreenShot\Logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
