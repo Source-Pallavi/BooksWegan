@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BooksWeagon.Pages
 {
-    class Login
+  public  class Login
     {
         public IWebDriver driver;
 
@@ -26,7 +26,7 @@ namespace BooksWeagon.Pages
         [FindsBy(How = How.XPath, Using = "//input[@id='ctl00_phBody_SignIn_txtPassword']")]
         public IWebElement Password;
 
-        [FindsBy(How = How.XPath, Using = "//body//div//div//div//div//div//div[1]//div[1]//div[5]//input[1]")]
+        [FindsBy(How = How.XPath, Using = "/html/body/form/div[4]/div[3]/div[2]/div/div/div[1]/div/div[3]/div[2]/input[1]")]
         public IWebElement SignIn;
 
         public void LoginPage()
@@ -34,6 +34,7 @@ namespace BooksWeagon.Pages
               CredentialsData credentials = new CredentialsData();
               Userid.SendKeys(credentials.email);
               Password.SendKeys(credentials.password);
+
             SignIn.Click();
             Thread.Sleep(5000);
         }

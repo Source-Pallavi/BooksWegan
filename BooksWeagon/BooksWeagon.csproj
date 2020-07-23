@@ -90,10 +90,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address\AddressDetails.cs" />
     <Compile Include="Base\BaseClass.cs" />
     <Compile Include="Crdentials\CredentialsData.cs" />
+    <Compile Include="Email\SendEmail.cs" />
     <Compile Include="Extentreport\Extent.cs" />
+    <Compile Include="Pages\IPlaceTheOrder.cs" />
     <Compile Include="Pages\Logout.cs" />
+    <Compile Include="Pages\PlaceOrder.cs" />
+    <Compile Include="Pages\SavaAndContinue.cs" />
     <Compile Include="ScreenShot\ScreenS.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Pages\Login.cs" />

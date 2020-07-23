@@ -1,6 +1,7 @@
 ﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using BooksWeagon.Base;
+using BooksWeagon.Email;
 using BooksWeagon.Pages;
 using BooksWeagon.ScreenShot;
 using NUnit.Framework;
@@ -50,13 +51,24 @@ namespace BooksWeagon
             Login page = new Login(driver);
             page.LoginPage();
         }
+
         [Test, Order(2)]
+        public void PlaceOrder()
+        {
+
+            PlaceOrder page = new PlaceOrder(driver);
+            page.Place();
+        }
+        [Test, Order(3)]
         public void Logout()
         {
 
             Logout page = new Logout(driver);
             page.LogOut();
         }
+       
+
+
         [TearDown]
         public void AfterTest()
         {
@@ -96,8 +108,9 @@ namespace BooksWeagon
             try
             {
                 _extent.Flush();
-                driver.Close();
+                 driver.Close();
                 driver.Quit();
+                SendEmail.Send_Report_In_Mail();
             }
             catch (Exception e)
             {

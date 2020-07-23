@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,23 +9,23 @@ using System.Threading.Tasks;
 
 namespace BooksWeagon.Pages
 {
-    class Logout
+   public class Logout
     {
         public Logout(IWebDriver driver)
         {
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.XPath, Using = "//span[@class='login-bg sprite usermenu-bg']")]
-        public IWebElement AccountSetting;
+     //   [FindsBy(How = How.XPath, Using = "//span[@class='login-bg sprite usermenu-bg']")]
+      //  public IWebElement AccountSetting;
 
-        [FindsBy(How = How.Id, Using = "ctl00_lnkbtnLogout")]
+        [FindsBy(How = How.XPath, Using = "//a[@id='ctl00_lnkbtnLogout']")]
         public IWebElement Log;
 
         public void LogOut()
         {
-            AccountSetting.Click();
-            Thread.Sleep(50000);
+          //  AccountSetting.Click();
+            Thread.Sleep(5000);
             Log.Click();
         }
     }
