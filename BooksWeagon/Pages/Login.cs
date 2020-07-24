@@ -26,7 +26,7 @@ namespace BooksWeagon.Pages
         [FindsBy(How = How.XPath, Using = "//input[@id='ctl00_phBody_SignIn_txtPassword']")]
         public IWebElement Password;
 
-        [FindsBy(How = How.XPath, Using = "/html/body/form/div[4]/div[3]/div[2]/div/div/div[1]/div/div[3]/div[2]/input[1]")]
+        [FindsBy(How = How.XPath, Using = "//input[@id='ctl00_phBody_SignIn_btnLogin']")]
         public IWebElement SignIn;
 
         public void LoginPage()

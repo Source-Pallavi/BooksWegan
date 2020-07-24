@@ -25,7 +25,7 @@ namespace BooksWeagon.Email
 
             mail.Body = "Please find the attached report to get details.”";
 
-            var mostRecentlyModified = Directory.GetFiles(@"C: \Users\rebel\source\repos\BooksWeagon\BooksWeagon\Extentreport\", "*.html")
+            var mostRecentlyModified = Directory.GetFiles(@"C:\Users\rebel\source\repos\BooksWeagon\BooksWeagon\Extentreport\", "*.html")
             .Select(f => new FileInfo(f))
             .OrderByDescending(fi => fi.LastWriteTime)
             .First()
@@ -38,7 +38,6 @@ namespace BooksWeagon.Email
             SmtpServer.Port = 587;
             SmtpServer.Credentials = new System.Net.NetworkCredential("pallavidubey6232@gmail.com", "12respect34");
             SmtpServer.EnableSsl = true;
-
             SmtpServer.Send(mail);
 
         }

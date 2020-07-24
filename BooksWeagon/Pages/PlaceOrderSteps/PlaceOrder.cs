@@ -53,96 +53,34 @@ namespace BooksWeagon.Pages
         [FindsBy(How = How.XPath, Using = "//a[contains(text(),'Continue')]")]
 
         public IWebElement continueButton;
-        //div[@class='checkout-bg']
-        [FindsBy(How = How.XPath, Using = "//div[@class='new']")]
+      
+       
+      
 
-        public IWebElement Frame;
-
-        [FindsBy(How = How.XPath, Using = "//input[@id='ctl00_cpBody_txtNewRecipientName']")]
-
-        public IWebElement receiptName;
-
-        [FindsBy(How = How.XPath, Using = "//textarea[@id='ctl00_cpBody_txtNewAddress']")]
-
-        public IWebElement address;
-
-        [FindsBy(How = How.Id, Using = "ctl00_cpBody_ddlNewState")]
-
-        public IWebElement state;
-
-        [FindsBy(How = How.Id, Using = "ctl00_cpBody_txtNewCity")]
-
-        public IWebElement city;
-
-        [FindsBy(How = How.Id, Using = "ctl00_cpBody_txtNewPincode")]
-
-        public IWebElement pinCode;
-
-        [FindsBy(How = How.Id, Using = "ctl00_cpBody_txtNewMobile")]
 
         public IWebElement mobileNumber;
-
-      /*  [FindsBy(How = How.Id, Using = "ctl00_cpBody_imgSaveNew")]
-
-        public IWebElement saveAndContinue;
-
-        [FindsBy(How = How.XPath, Using = "//input[@id='ctl00_cpBody_ShoppingCart_lvCart_savecontinue']")]
-        public IWebElement SaveAndContinue;*/
         public void Place()
-        {
+        {//searching for book
+            Thread.Sleep(1000);
             Thread.Sleep(5000);
             SearchTab.SendKeys("Scion of Ikshvaku");
             Search.Click();
             Thread.Sleep(5000);
-
+            //buying the book
             Book.Click();
             Thread.Sleep(5000); 
-
-            /*BuyNow.Click();
-            Thread.Sleep(5000);*/
-
             driver.SwitchTo().Frame(frame);
             Thread.Sleep(5000);
             // Switching to innerframe
             Placeorder.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(50000);
+
             Paynow.Click();
-            // Placeorder1.Click();
-          //  continueButton.Click();
             Thread.Sleep(1000);
-          //  driver.SwitchTo().Frame(Frame);
-          /*  receiptName.Click();
-            Thread.Sleep(1000);
-            receiptName.SendKeys("Pallavi");
-            Thread.Sleep(1000);
-            address.Click();
-            Thread.Sleep(1000);
-            address.SendKeys("G-25 Narmada Nagar, Khandwa");
-            Thread.Sleep(1000);
-            SelectElement selectState = new SelectElement(state);
-            Thread.Sleep(1000);
-            selectState.SelectByText("Madhya Pradesh");
-            Thread.Sleep(1000);
-            city.Click();
-            Thread.Sleep(1000);
-            city.SendKeys("Indore");
-            Thread.Sleep(1000);
-            pinCode.Click();
-            Thread.Sleep(1000);
-            pinCode.SendKeys("450001");
-            Thread.Sleep(1000);
-            mobileNumber.Click();
-            Thread.Sleep(1000);
-            mobileNumber.SendKeys("6232077345");
-            Thread.Sleep(1000);*/
-            /*   saveAndContinue.Click();
-               Thread.Sleep(2000);
-               SaveAndContinue.Click();
-               Thread.Sleep(2000);*/
             IPlaceTheOrder placeOrder;
-            placeOrder = new AddressDetails(driver);
+            placeOrder = new AddressDetails(driver);//address details
             placeOrder.Processing();
-            placeOrder = new SavaAndContinue(driver);
+            placeOrder = new SavaAndContinue(driver);//*/..
             placeOrder.Processing();
            
 

@@ -26,9 +26,9 @@ namespace BooksWeagon
         protected ExtentTest _test=null;
         ///For report directory creation and HTML report template creation
         ///For driver instantiation
-      
+        public static log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-            public Test(string browserName)
+        public Test(string browserName)
         {
             try { 
             driver = StartBrowser("chrome");
@@ -50,6 +50,7 @@ namespace BooksWeagon
 
             Login page = new Login(driver);
             page.LoginPage();
+            log.Info("done");
         }
 
         [Test, Order(2)]
@@ -65,6 +66,7 @@ namespace BooksWeagon
 
             Logout page = new Logout(driver);
             page.LogOut();
+            log.Info("Succefully Done");
         }
        
 
