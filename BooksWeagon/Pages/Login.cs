@@ -38,6 +38,33 @@ namespace BooksWeagon.Pages
             SignIn.Click();
             Thread.Sleep(5000);
         }
+        public void LoginPageNeg1()
+        {
+            CredentialsData credentials = new CredentialsData();
+            Userid.SendKeys("pallavidubey@gmail.com");
+            Password.SendKeys(credentials.password);
+
+            SignIn.Click();
+            Thread.Sleep(5000);
+        }
+        public void LoginPageNeg2()
+        {
+            CredentialsData credentials = new CredentialsData();
+            Userid.SendKeys("pallavidubey0823gmail.com");
+            Password.SendKeys("");
+            SignIn.Click();
+            Thread.Sleep(5000);
+        }
+        public void LoginPageNeg3()
+        {
+            CredentialsData credentials = new CredentialsData();
+            Userid.SendKeys("pallavidubey0823gmail.com");
+            Password.SendKeys(credentials.password);
+
+            SignIn.Click();
+            Thread.Sleep(5000);
+        }
+
 
     }
 }

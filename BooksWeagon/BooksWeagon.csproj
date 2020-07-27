@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="Custom Exception\BWException.cs" />
     <Compile Include="Custom Exception\Error.cs" />
+    <Compile Include="NegativeTest.cs" />
     <Compile Include="Pages\PlaceOrderSteps\AddressDetails.cs" />
     <Compile Include="Base\BaseClass.cs" />
     <Compile Include="Crdentials\CredentialsData.cs" />
