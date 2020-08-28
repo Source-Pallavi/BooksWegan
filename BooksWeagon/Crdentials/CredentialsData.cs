@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BooksWeagon.NewFolder1
 {
-   public class CredentialsData
+   public class CredentialsData//to fetching the creadential data which is to achive the data driven 
     {
         public string email = "";
         public string password = "";
@@ -17,12 +17,12 @@ namespace BooksWeagon.NewFolder1
         public string json = "";
 
         public CredentialsData()
-        {
+        {// creating reading object
             using (StreamReader r = new StreamReader(@"C:\Users\rebel\source\repos\BooksWeagon\BooksWeagon\Crdentials\data.json"))
             {
-                json = r.ReadToEnd();
+                json = r.ReadToEnd();//reading stream in json 
             }
-
+            //fetching the data  from json file the feild we are  fetching
             dynamic array = JsonConvert.DeserializeObject(json);
             Console.WriteLine("Array:" + array["email"]);
             email = array["email"];

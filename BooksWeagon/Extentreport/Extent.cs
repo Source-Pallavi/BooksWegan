@@ -8,5 +8,6 @@ namespace BooksWeagon.Extentreport
 {
    public class Extent
     {
+
     }
 }

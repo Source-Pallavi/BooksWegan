@@ -17,7 +17,6 @@ using System.Threading.Tasks;
 namespace BooksWeagon
 {
     [TestFixture("chrome")]
-    [TestFixture("firefox")]
     [Parallelizable]
     public class Test:BaseClass
     {
@@ -49,7 +48,7 @@ namespace BooksWeagon
         {
 
             Login page = new Login(driver);
-            page.LoginPage();
+            page.LoginPage();//Login to bookewagon by adding proper credentials
             log.Info("done");
         }
 
@@ -57,14 +56,14 @@ namespace BooksWeagon
         public void PlaceOrder()
         {
 
-            PlaceOrder page = new PlaceOrder(driver);
+            PlaceOrder page = new PlaceOrder(driver);//place order  
             page.Place();
         }
         [Test, Order(3)]
         public void Logout()
         {
 
-            Logout page = new Logout(driver);
+            Logout page = new Logout(driver);//log out
             page.LogOut();
             log.Info("Succefully Done");
         }

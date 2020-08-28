@@ -17,17 +17,17 @@ namespace BooksWeagon.Pages
         this.driver = driver;
         PageFactory.InitElements(driver, this);
     }
-    [FindsBy(How = How.Id, Using = "ctl00_TopSearch1_txtSearch")]
+       [FindsBy(How = How.Id, Using = "ctl00_TopSearch1_txtSearch")]
 
-    public IWebElement SearchTab;
+       public IWebElement SearchTab;
 
-    [FindsBy(How = How.Name, Using = "ctl00$TopSearch1$Button1")]
+       [FindsBy(How = How.Name, Using = "ctl00$TopSearch1$Button1")]
 
-    public IWebElement Search;
+       public IWebElement Search;
 
-    [FindsBy(How = How.XPath, Using = "//div[@class='search-results fltrs']//div[1]//div[4]//div[5]//a[1]//input[1]")]
+       [FindsBy(How = How.XPath, Using = "//div[@class='search-results fltrs']//div[1]//div[4]//div[5]//a[1]//input[1]")]
 
-    public IWebElement Book;
+        public IWebElement Book;
         [FindsBy(How = How.XPath, Using = "//html//body//div//div//div//div//div//iframe")]
 
         public IWebElement frame;

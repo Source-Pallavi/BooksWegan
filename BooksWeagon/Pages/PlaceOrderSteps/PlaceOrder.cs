@@ -87,5 +87,21 @@ namespace BooksWeagon.Pages
 
 
         }
-    }
+        public void Place1()
+        {//searching for book
+            Thread.Sleep(1000);
+            Thread.Sleep(5000);
+            SearchTab.SendKeys("Wings of fire");
+            Search.Click();
+            Thread.Sleep(5000);
+            //buying the book
+            Book.Click();
+            Thread.Sleep(5000);
+            driver.SwitchTo().Frame(frame);
+            Thread.Sleep(5000);
+            // Switching to innerframe
+            Placeorder.Click();
+            Thread.Sleep(50000);
+        }
+        }
 }

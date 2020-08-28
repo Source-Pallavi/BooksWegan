@@ -67,6 +67,15 @@ namespace BooksWeagon
             page.LoginPageNeg3();
             log.Info("done");
         }
+        [Test, Order(4)]
+        public void LoginTest3()
+        {
+            Login page = new Login(driver);
+            page.LoginPage();
+            PlaceOrder pagee = new PlaceOrder(driver);
+            pagee.Place();
+            log.Info("done");
+        }
 
         [TearDown]
         public void AfterTest()
