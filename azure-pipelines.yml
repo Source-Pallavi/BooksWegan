@@ -1,7 +1,9 @@
 # ASP.NET Core (.NET Framework)
-- task: DotNetCoreCLI@2
+- task: PublishTestResults@2
   inputs:
-    command: 'build'
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    mergeTestResults: true
 # Build and test ASP.NET Core projects targeting the full .NET Framework.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
